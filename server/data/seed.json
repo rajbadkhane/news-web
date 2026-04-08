@@ -1,0 +1,155 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "World",
+      "slug": "world",
+      "nameHi": "विश्व",
+      "createdAt": "2026-04-06T00:00:00.000Z",
+      "updatedAt": "2026-04-06T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Business",
+      "slug": "business",
+      "nameHi": "बिजनेस",
+      "createdAt": "2026-04-06T00:00:00.000Z",
+      "updatedAt": "2026-04-06T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Tech",
+      "slug": "tech",
+      "nameHi": "टेक",
+      "createdAt": "2026-04-06T00:00:00.000Z",
+      "updatedAt": "2026-04-06T00:00:00.000Z"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "slug": "cabinet-clears-riverfront-mobility-project",
+      "titleEn": "Cabinet clears riverfront mobility project",
+      "titleHi": "कैबिनेट ने रिवरफ्रंट मोबिलिटी प्रोजेक्ट को मंजूरी दी",
+      "excerptEn": "A flagship urban transit plan gets the green light with phased rollout targets.",
+      "excerptHi": "शहरी ट्रांजिट योजना को चरणबद्ध लक्ष्य के साथ मंजूरी मिली।",
+      "contentEn": "The state cabinet approved the riverfront mobility project and directed the transport department to begin phase-one execution.",
+      "contentHi": "राज्य कैबिनेट ने रिवरफ्रंट मोबिलिटी प्रोजेक्ट को मंजूरी दी और ट्रांसपोर्ट विभाग को पहले चरण के काम शुरू करने का निर्देश दिया।",
+      "authorName": "Ritika Sen",
+      "heroImage": "/images/riverfront.jpg",
+      "videoUrl": "https://example.com/video/riverfront",
+      "languagePrimary": "English",
+      "status": "PUBLISHED",
+      "publishedAt": "2026-04-06T08:20:00.000Z",
+      "categoryId": 1,
+      "createdAt": "2026-04-06T08:10:00.000Z",
+      "updatedAt": "2026-04-06T08:20:00.000Z"
+    },
+    {
+      "id": 2,
+      "slug": "gold-edges-higher-as-treasury-yields-soften",
+      "titleEn": "Gold edges higher as treasury yields soften",
+      "titleHi": "ट्रेजरी यील्ड नरम पड़ने से सोना मजबूत हुआ",
+      "excerptEn": "Bullion strengthened after weaker bond yields calmed market nerves.",
+      "excerptHi": "कमज़ोर बॉन्ड यील्ड के बाद बाजार में राहत दिखी और सोना मजबूत हुआ।",
+      "contentEn": "Gold prices moved higher in early trade as treasury yields eased and traders shifted back into defensive assets.",
+      "contentHi": "ट्रेजरी यील्ड में नरमी के बाद शुरुआती कारोबार में सोने की कीमतों में बढ़त दर्ज की गई।",
+      "authorName": "Aman Kapoor",
+      "heroImage": "/images/gold.jpg",
+      "videoUrl": "",
+      "languagePrimary": "English",
+      "status": "PUBLISHED",
+      "publishedAt": "2026-04-06T09:10:00.000Z",
+      "categoryId": 2,
+      "createdAt": "2026-04-06T09:00:00.000Z",
+      "updatedAt": "2026-04-06T09:10:00.000Z"
+    }
+  ],
+  "epapers": [
+    {
+      "id": 1,
+      "title": "Morning Edition",
+      "editionDate": "2026-04-06T00:00:00.000Z",
+      "language": "English",
+      "pdfUrl": "/epapers/morning-edition.pdf",
+      "thumbnailUrl": "/epapers/morning-edition.jpg",
+      "isPublished": true,
+      "createdAt": "2026-04-06T05:00:00.000Z",
+      "updatedAt": "2026-04-06T05:00:00.000Z"
+    }
+  ],
+  "highlights": [
+    {
+      "id": 1,
+      "titleEn": "Metro trials begin on eastern loop",
+      "titleHi": "ईस्टर्न लूप पर मेट्रो ट्रायल शुरू",
+      "summaryEn": "Commuter-focused testing begins ahead of the festive rush.",
+      "summaryHi": "त्योहारी सीजन से पहले यात्रियों के लिए ट्रायल शुरू हुआ।",
+      "imageUrl": "/highlights/metro.jpg",
+      "caption": "नई लाइन पर यात्रियों की सुविधा और समय बचत दोनों पर फोकस है।",
+      "priority": "HIGH",
+      "priorityWeight": 3,
+      "location": "नई दिल्ली, भारत",
+      "tags": "breaking, metro, city",
+      "source": "एएनआई",
+      "altText": "मेट्रो ट्रायल की तस्वीर",
+      "views": 1240,
+      "downloads": 118,
+      "shares": 86,
+      "showInGallery": true,
+      "allowDownloads": true,
+      "allowSharing": true,
+      "addWatermark": true,
+      "displayOrder": 1,
+      "isActive": true,
+      "categoryId": 1,
+      "createdAt": "2026-04-06T06:00:00.000Z",
+      "updatedAt": "2026-04-06T06:00:00.000Z"
+    }
+  ],
+  "nits": [
+    {
+      "id": 1,
+      "title": "Cabinet watch: infra and transport take center stage",
+      "titleHi": "कैबिनेट फोकस: इंफ्रा और परिवहन पर सबसे ज्यादा नजर",
+      "summary": "Policy desk tracks the biggest signals from cabinet decisions, political reactions, and execution timelines.",
+      "summaryHi": "नीति डेस्क कैबिनेट फैसलों, राजनीतिक प्रतिक्रियाओं और लागू होने की समय-सीमा पर नजर रख रहा है।",
+      "region": "राष्ट्रीय",
+      "tag": "Policy Watch",
+      "sentiment": "POSITIVE",
+      "priority": "HIGH",
+      "source": "Desk Analysis",
+      "isActive": true,
+      "categoryId": 1,
+      "createdAt": "2026-04-06T08:40:00.000Z",
+      "updatedAt": "2026-04-06T08:40:00.000Z"
+    }
+  ],
+  "inshorts": [
+    {
+      "id": 1,
+      "headlineEn": "State boards adopt AI literacy",
+      "headlineHi": "राज्य बोर्ड ने एआई साक्षरता अपनाई",
+      "bodyEn": "Boards add AI fundamentals to the new curriculum from the next academic term.",
+      "bodyHi": "अगले शैक्षणिक सत्र से पाठ्यक्रम में एआई की बुनियादी समझ जोड़ी जाएगी।",
+      "isPublished": true,
+      "categoryId": 3,
+      "createdAt": "2026-04-06T07:00:00.000Z",
+      "updatedAt": "2026-04-06T07:00:00.000Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "title": "Breaking: Cabinet clears riverfront mobility project",
+      "body": "Open the app for route maps, budget highlights, and expected launch windows.",
+      "audience": "all-users",
+      "type": "BREAKING",
+      "sentAt": "2026-04-06T08:25:00.000Z",
+      "isScheduled": false,
+      "scheduledFor": null,
+      "createdAt": "2026-04-06T08:22:00.000Z",
+      "updatedAt": "2026-04-06T08:25:00.000Z"
+    }
+  ]
+}

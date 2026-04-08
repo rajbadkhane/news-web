@@ -1,0 +1,141 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum ArticleStatus {
+  DRAFT
+  REVIEW
+  PUBLISHED
+  ARCHIVED
+}
+
+enum NotificationType {
+  BREAKING
+  EDITORIAL
+  EPAPER
+  HIGHLIGHT
+}
+
+model Category {
+  id         Int         @id @default(autoincrement())
+  name       String
+  slug       String      @unique
+  nameHi     String?
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  articles   Article[]
+  highlights Highlight[]
+  nits       NIT[]
+  inshorts   Inshort[]
+}
+
+model Article {
+  id              Int           @id @default(autoincrement())
+  slug            String        @unique
+  titleEn         String
+  titleHi         String?
+  excerptEn       String?
+  excerptHi       String?
+  contentEn       String
+  contentHi       String?
+  authorName      String
+  heroImage       String?
+  videoUrl        String?
+  languagePrimary String        @default("English")
+  status          ArticleStatus @default(DRAFT)
+  publishedAt     DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  categoryId      Int
+  category        Category      @relation(fields: [categoryId], references: [id])
+}
+
+model EPaper {
+  id           Int      @id @default(autoincrement())
+  title        String
+  editionDate  DateTime
+  language     String   @default("English")
+  pdfUrl       String
+  thumbnailUrl String
+  isPublished  Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Highlight {
+  id           Int       @id @default(autoincrement())
+  titleEn      String
+  titleHi      String?
+  summaryEn    String?
+  summaryHi    String?
+  imageUrl     String?
+  caption      String?
+  priority     String    @default("NORMAL")
+  priorityWeight Int     @default(1)
+  location     String?
+  tags         String?
+  source       String?
+  altText      String?
+  views        Int       @default(0)
+  downloads    Int       @default(0)
+  shares       Int       @default(0)
+  showInGallery Boolean  @default(true)
+  allowDownloads Boolean @default(true)
+  allowSharing Boolean   @default(true)
+  addWatermark Boolean   @default(true)
+  displayOrder Int       @default(0)
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  categoryId   Int?
+  category     Category? @relation(fields: [categoryId], references: [id])
+}
+
+model NIT {
+  id         Int       @id @default(autoincrement())
+  title      String
+  titleHi    String?
+  summary    String
+  summaryHi  String?
+  region     String?
+  tag        String?
+  sentiment  String    @default("NEUTRAL")
+  priority   String    @default("MEDIUM")
+  source     String?
+  isActive   Boolean   @default(true)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  categoryId Int?
+  category   Category? @relation(fields: [categoryId], references: [id])
+}
+
+model Inshort {
+  id          Int       @id @default(autoincrement())
+  headlineEn  String
+  headlineHi  String?
+  bodyEn      String
+  bodyHi      String?
+  isPublished Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  categoryId  Int?
+  category    Category? @relation(fields: [categoryId], references: [id])
+}
+
+model Notification {
+  id           Int              @id @default(autoincrement())
+  title        String
+  body         String
+  audience     String?
+  type         NotificationType @default(EDITORIAL)
+  sentAt       DateTime?
+  isScheduled  Boolean          @default(false)
+  scheduledFor DateTime?
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+}
