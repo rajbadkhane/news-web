@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { RouteProgress } from "@/components/shared/route-progress";
 import "./globals.css";
 
 function getSiteUrl() {
@@ -54,7 +55,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="hi">
-      <body>{children}</body>
+      <body>
+        <RouteProgress />
+        {children}
+      </body>
     </html>
   );
 }

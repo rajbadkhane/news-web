@@ -32,6 +32,109 @@ input {
   font: inherit;
 }
 
+:where(button, a[href], [role="button"], input[type="button"], input[type="submit"]) {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform 140ms ease,
+    filter 140ms ease,
+    box-shadow 180ms ease,
+    opacity 180ms ease;
+}
+
+:where(button, a[href], [role="button"], input[type="button"], input[type="submit"]):hover {
+  filter: brightness(1.03);
+}
+
+:where(button, a[href], [role="button"], input[type="button"], input[type="submit"]):active {
+  transform: translateY(1px) scale(0.97);
+  filter: brightness(0.94);
+}
+
+:where(button, a[href], [role="button"], input[type="button"], input[type="submit"]):focus-visible {
+  outline: 2px solid rgba(255, 180, 95, 0.85);
+  outline-offset: 3px;
+}
+
+.route-progress-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 9997;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(circle at top, rgba(255, 180, 95, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(11, 37, 52, 0.06), transparent 26%);
+  transition: opacity 180ms ease;
+}
+
+.route-progress-glow--active {
+  opacity: 1;
+}
+
+.route-progress-shell {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  width: 148px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-10px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.route-progress-shell--active {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.loader {
+  width: 64px;
+  height: 48px;
+  position: relative;
+  animation: split 1s ease-in infinite alternate;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  border-radius: 999px;
+  left: 0;
+  top: 0;
+  transform: translateX(-10px);
+  background: #ff3d00;
+  opacity: 0.75;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(255, 61, 0, 0.2);
+}
+
+.loader::after {
+  left: auto;
+  right: 0;
+  background: #fff;
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.18);
+}
+
+@keyframes split {
+  0%,
+  25% {
+    width: 64px;
+  }
+
+  100% {
+    width: 148px;
+  }
+}
+
 input::placeholder {
   color: inherit;
 }
